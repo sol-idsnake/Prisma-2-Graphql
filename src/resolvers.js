@@ -1,5 +1,4 @@
 // A resolver is a function that's responsible for populating the data for a single field in your schema.
-const cuid = require("cuid");
 
 const Query = {
 	challenges: async (parent, args, context, info) => {
@@ -11,7 +10,6 @@ const Mutation = {
 	challenge: async (parent, args, context, info) => {
 		const challenge = await context.prisma.challenge.create({
 			data: {
-				id: cuid(),
 				title: args.title,
 			},
 		});

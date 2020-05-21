@@ -4,7 +4,7 @@
 
     - npm i @prisma/cli
     - npx prisma init
-    - change .env variable to Amazon RDS instance
+    - change .env variable to Amazon RDS instance or local DB instance
     - add model to prisma/schema.prisma
 
 ### After any changes to the `schema.prisma`, afterwards run:
