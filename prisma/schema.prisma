@@ -8,7 +8,7 @@ generator client {
 }
 
 model Challenge {
-  id        Int      @default(cuid()) @id
+  id        String   @default(cuid()) @id
   title     String
   completed Boolean  @default(false)
   createdAt DateTime @default(now())
