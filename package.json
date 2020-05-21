@@ -4,13 +4,15 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "npx @prisma/cli studio --experimental",
-		"start": "nodemon -e js, node --inspect src/index.js"
+		"start": "nodemon -e js, graphql -x node src/index.js",
+		"dev": "nodemon -e js, graphql -x node --inspect src/index.js",
+		"prisma": "npx @prisma/cli studio --experimental"
 	},
 	"dependencies": {
 		"@babel/preset-env": "^7.9.6",
 		"@prisma/client": "^2.0.0-beta.5",
 		"apollo-server": "^2.13.1",
+		"cuid": "^2.1.8",
 		"graphql": "^15.0.0"
 	},
 	"devDependencies": {
