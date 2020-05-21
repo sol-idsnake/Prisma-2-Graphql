@@ -6,8 +6,13 @@
     - npx prisma init
     - change .env variable to Amazon RDS instance
     - add model to prisma/schema.prisma
+
+### After any changes to the `schema.prisma`, afterwards run:
+
     - npx prisma migrate save --experimental
     - npx prisma migrate up -- experimental
     - npx prisma generate
+
+    This will update the schema on the databse, and reflect those changes in your Prisma Client.
 
     - Use `npm run dev` to use the Prisma Studio (experimental), or `npm start` to use the graphql playground
