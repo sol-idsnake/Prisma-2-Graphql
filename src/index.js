@@ -3,6 +3,8 @@ const prisma = require("./db");
 const resolvers = require("./resolvers");
 const typeDefs = require("./typedefs");
 
+console.clear();
+
 const schema = makeExecutableSchema({
 	typeDefs,
 	resolvers,
