@@ -4,6 +4,9 @@ const Query = {
 	challenges: async (parent, args, context, info) => {
 		return await context.prisma.challenge.findMany();
 	},
+	ziele: async (parent, args, context, info) => {
+		return await context.prisma.ziel.findMany({ include: { steps: true } });
+	},
 };
 
 const Mutation = {
@@ -40,19 +43,16 @@ const Mutation = {
 			throw new Error("Parent Id  cannot be empty");
 		}
 
-		const step = await context.prisma.step.create(
-			{
-				data: {
-					title: args.title,
-					Ziel: {
-						connect: {
-							id: args.zielId,
-						},
+		const step = await context.prisma.step.create({
+			data: {
+				title: args.title,
+				ziel: {
+					connect: {
+						id: args.zielId,
 					},
 				},
 			},
-			info
-		);
+		});
 
 		return step;
 	},
