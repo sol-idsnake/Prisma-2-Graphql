@@ -7,8 +7,8 @@ const typeDefs = gql`
 		id: String
 		title: String!
 		completed: Boolean
-		createdAt: Float!
-		updatedAt: Float!
+		createdAt: String!
+		updatedAt: String!
 	}
 
 	type Ziel {
@@ -16,8 +16,8 @@ const typeDefs = gql`
 		title: String!
 		completed: Boolean
 		steps: [Step!]
-		createdAt: Float!
-		updatedAt: Float!
+		createdAt: String!
+		updatedAt: String!
 	}
 
 	type Step {
@@ -25,8 +25,8 @@ const typeDefs = gql`
 		title: String!
 		completed: Boolean
 		zielId: String!
-		createdAt: Float!
-		updatedAt: Float!
+		createdAt: String!
+		updatedAt: String!
 	}
 
 	type Query {
