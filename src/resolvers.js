@@ -2,7 +2,7 @@
 
 const Query = {
 	challenges: async (parent, args, context, info) => {
-		return context.prisma.challenge.findMany();
+		return await context.prisma.challenge.findMany();
 	},
 };
 
