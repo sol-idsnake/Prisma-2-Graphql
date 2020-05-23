@@ -19,5 +19,5 @@ pids
 *.seed
 *.pid.lock
 
-# old Prisma migrations
+# local Prisma migrations
 prisma/migrations/**/*
