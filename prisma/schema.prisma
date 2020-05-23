@@ -30,6 +30,6 @@ model Step {
   completed Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Ziel      Ziel     @relation(fields: [zielId], references: [id])
+  ziel      Ziel     @relation(fields: [zielId], references: [id])
   zielId    String
 }
