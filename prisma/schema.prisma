@@ -24,7 +24,6 @@ model Ziel {
   updatedAt DateTime @updatedAt
 }
 
-// Ziel      Ziel?    @relation(fields: [zielId], references: [id])
 model Step {
   id        String   @default(cuid()) @id
   title     String   @unique

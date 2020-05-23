@@ -2,12 +2,13 @@ const { gql } = require("apollo-server");
 
 const typeDefs = gql`
 	# Your schema will go here
+	# Schema = What format has the data being sent to the client?
 	type Challenge {
 		id: String
 		title: String!
 		completed: Boolean
-		createdAt: Int!
-		updatedAt: Int!
+		createdAt: Float!
+		updatedAt: Float!
 	}
 
 	type Ziel {
@@ -15,8 +16,8 @@ const typeDefs = gql`
 		title: String!
 		completed: Boolean
 		steps: [Step!]
-		createdAt: Int!
-		updatedAt: Int!
+		createdAt: Float!
+		updatedAt: Float!
 	}
 
 	type Step {
@@ -24,8 +25,8 @@ const typeDefs = gql`
 		title: String!
 		completed: Boolean
 		zielId: String!
-		createdAt: Int!
-		updatedAt: Int!
+		createdAt: Float!
+		updatedAt: Float!
 	}
 
 	type Query {
